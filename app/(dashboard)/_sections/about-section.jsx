@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ProfilePanel from "./profile-panel";
 import AboutPanel from "./about-panel";
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,11 +14,10 @@ export default function AboutSection() {
 	const aboutContentRef = useRef(null);
 	const scrambledTextRef = useRef(null);
 
-	useEffect(() => {
+	useGSAP(() => {
 		const ctx = gsap.context(() => {
 			const panels = gsap.utils.toArray(".panel");
 
-			// Set initial state for about content (hidden)
 			if (aboutContentRef.current) {
 				gsap.set(aboutContentRef.current.children, {
 					y: 80,
@@ -25,7 +25,6 @@ export default function AboutSection() {
 				});
 			}
 
-			// Set initial state for scrambled text (hidden at bottom)
 			if (scrambledTextRef.current) {
 				gsap.set(scrambledTextRef.current, {
 					y: 100,
@@ -33,7 +32,6 @@ export default function AboutSection() {
 				});
 			}
 
-			// Horizontal scroll animation with content triggers
 			const horizontalTween = gsap.to(panels, {
 				xPercent: -100 * (panels.length - 1),
 				ease: "none",
@@ -45,12 +43,11 @@ export default function AboutSection() {
 					end: () => "+=" + containerRef.current.offsetWidth,
 					onUpdate: (self) => {
 						const progress = self.progress;
-						const aboutPanelStart = 0.3;
+						const aboutPanelStart = 0.2;
 						const aboutPanelVisible = 0.5;
 
-						// Animate scrambled text when first panel is visible
 						if (
-							progress <= 0.2 &&
+							progress <= 0.1 &&
 							scrambledTextRef.current &&
 							!scrambledTextRef.current.hasAttribute("data-animated")
 						) {
@@ -65,7 +62,6 @@ export default function AboutSection() {
 							});
 						}
 
-						// Trigger about content and tech icons animation
 						if (
 							progress >= aboutPanelVisible &&
 							aboutContentRef.current &&
@@ -73,7 +69,6 @@ export default function AboutSection() {
 						) {
 							aboutContentRef.current.setAttribute("data-animated", "true");
 
-							// Animate about content
 							gsap.to(aboutContentRef.current.children, {
 								y: 0,
 								opacity: 1,
@@ -82,7 +77,6 @@ export default function AboutSection() {
 								ease: "power3.out",
 							});
 
-							// Animate tech icons after a short delay
 							setTimeout(() => {
 								if (
 									aboutContentRef.current &&
@@ -93,7 +87,6 @@ export default function AboutSection() {
 							}, 800);
 						}
 
-						// Reset animations when scrolling back
 						if (
 							progress < aboutPanelStart &&
 							aboutContentRef.current &&
@@ -106,7 +99,6 @@ export default function AboutSection() {
 								opacity: 0,
 							});
 
-							// Reset tech icons
 							if (
 								aboutContentRef.current &&
 								aboutContentRef.current.resetTechIcons

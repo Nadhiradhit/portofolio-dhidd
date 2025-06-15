@@ -3,7 +3,10 @@ import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import HeroSection from "./_sections/hero-section";
 import AboutSection from "./_sections/about-section";
-import AdditionalSection from "./_sections/additional-section";
+import ProjectSection from "./_sections/project-section";
+import SkillSection from "./_sections/skill-section";
+import FooterSection from "./_sections/footer-section";
+import ExperienceSection from "./_sections/experience-section";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -23,7 +26,10 @@ export default function Page() {
 		<div>
 			<HeroSection onScrollToAbout={handleScrollToAbout} />
 			<AboutSection />
-			<AdditionalSection />
+			<ProjectSection />
+			<SkillSection />
+			<ExperienceSection />
+			<FooterSection />
 		</div>
 	);
 }

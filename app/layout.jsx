@@ -1,16 +1,27 @@
-import { Roboto, Roboto_Slab } from "next/font/google";
+import {
+	Plus_Jakarta_Sans,
+	Roboto_Slab,
+	Edu_AU_VIC_WA_NT_Hand,
+	Playfair,
+} from "next/font/google";
 import Navbar from "@/components/navbar/navbar";
 import "./globals.css";
 
-const roboto = Roboto({
-	variable: "--font-roboto",
+const playfair = Playfair({
+	variable: "--font-playfair",
 	weight: ["400", "500", "700"],
 	subsets: ["latin"],
 });
 
-const robotoSlab = Roboto_Slab({
-	variable: "--font-roboto-slab",
+const plusjakarta = Plus_Jakarta_Sans({
+	variable: "--font-plus-jakarta-sans",
 	weight: ["400", "700"],
+	subsets: ["latin"],
+});
+
+const eduAU = Edu_AU_VIC_WA_NT_Hand({
+	variable: "--font-edu-au",
+	weight: ["400"],
 	subsets: ["latin"],
 });
 
@@ -22,8 +33,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
-			<body className={`${roboto.variable} ${robotoSlab.variable} antialiased`}>
-				<Navbar />
+			<body
+				className={`${playfair.variable} ${plusjakarta.variable} ${eduAU.variable} antialiased`}>
+				{/* <Navbar /> */}
 				{children}
 			</body>
 		</html>

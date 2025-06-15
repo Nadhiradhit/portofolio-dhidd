@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
 
 export default function Navbar() {
 	const [isMenuOpen, setMenuOpen] = useState(false);
@@ -15,7 +16,7 @@ export default function Navbar() {
 		}
 	};
 
-	useEffect(() => {
+	useGSAP(() => {
 		gsap.set(navRef.current, {
 			opacity: 0,
 			y: -20,
@@ -29,7 +30,7 @@ export default function Navbar() {
 		});
 	}, []);
 
-	useEffect(() => {
+	useGSAP(() => {
 		if (mobileMenuRef.current) {
 			if (isMenuOpen) {
 				gsap.set(mobileMenuRef.current, {
@@ -79,7 +80,6 @@ export default function Navbar() {
 		setMenuOpen(false);
 	};
 
-	// Close menu when clicking outside
 	useEffect(() => {
 		const handleClickOutside = (event) => {
 			if (
@@ -137,7 +137,7 @@ export default function Navbar() {
 		<div className="w-full flex justify-center fixed top-0 left-0 z-50 py-2 sm:py-4 px-2 sm:px-4">
 			<nav
 				ref={navRef}
-				className="font-body flex items-center justify-between px-3 sm:px-4 md:px-20 py-3 sm:py-5 bg-[#29292a]/90 backdrop-blur-md text-white font-semibold md:max-w-7xl w-full mx-auto rounded-md relative shadow-lg border border-[#29292a]">
+				className="font-body flex items-center justify-between px-3 sm:px-4 md:px-20 py-3 sm:py-5 bg-[#29292a]/90 backdrop-blur-md text-white font-semibold  w-full mx-auto rounded-md relative shadow-lg border border-[#29292a]">
 				<div className="hidden md:flex items-center space-x-4">
 					<Link
 						href="/"
@@ -145,7 +145,7 @@ export default function Navbar() {
 						Home
 					</Link>
 					<Link
-						href="/projects"
+						href="#projects"
 						className="text-sm border-2 border-white/80 hover:border-white px-3 py-1 rounded-full hover:bg-white/10 transition-all duration-200 hover:scale-105">
 						Projects
 					</Link>
@@ -159,12 +159,12 @@ export default function Navbar() {
 
 				<div className="hidden md:flex items-center space-x-4">
 					<Link
-						href="/about"
+						href="#about"
 						className="text-sm border-2 border-white/80 hover:border-white px-3 py-1 rounded-full hover:bg-white/10 transition-all duration-200 hover:scale-105">
 						About
 					</Link>
 					<Link
-						href="/contact"
+						href="#contact"
 						className="text-sm border-2 border-white/80 hover:border-white px-3 py-1 rounded-full hover:bg-white/10 transition-all duration-200 hover:scale-105">
 						Contact
 					</Link>
@@ -205,21 +205,21 @@ export default function Navbar() {
 						</Link>
 						<Link
 							ref={addToRefs}
-							href="/projects"
+							href="#projects"
 							onClick={closeMenu}
 							className="text-2xl transition-all duration-200 text-start active:scale-95">
 							Projects
 						</Link>
 						<Link
 							ref={addToRefs}
-							href="/about"
+							href="#about"
 							onClick={closeMenu}
 							className="text-2xl transition-all duration-200 text-start active:scale-95">
 							About
 						</Link>
 						<Link
 							ref={addToRefs}
-							href="/contact"
+							href="#contact"
 							onClick={closeMenu}
 							className="text-2xl transition-all duration-200 text-start active:scale-95">
 							Contact

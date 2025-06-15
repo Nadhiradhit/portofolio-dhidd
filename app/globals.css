@@ -8,8 +8,9 @@
 @theme inline {
 	--color-background: var(--background);
 	--color-foreground: var(--foreground);
-	--font-body: var(--font-roboto);
-	--font-content: var(--font-roboto-slab);
+	--font-body: var(--font-playfair);
+	--font-content: var(--font-plus-jakarta-sans);
+	--font-heading: var(--font-edu-au);
 }
 
 @media (prefers-color-scheme: dark) {
