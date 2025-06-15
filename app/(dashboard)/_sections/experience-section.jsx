@@ -27,7 +27,7 @@ export default function ExperienceSection() {
 			companyLogo: soleraLogo,
 			period: "May 2025 - Present",
 			description:
-				"Building scalable server-side applications and APIs using Node.js and databases. Focus on performance optimization and secure data handling.",
+				"Collaborated with a cross-functional team to develop Solera Marketplace, a dedicated e-commerce website for students. My contributions included frontend development and crucial API integration, utilizing Next.js, Tailwind CSS, and Axios to create an intuitive and efficient mobile shopping experience.",
 		},
 		{
 			title: "Full-Stack Web Developer (Freelance)",
@@ -35,7 +35,7 @@ export default function ExperienceSection() {
 			companyLogo: polimediaLogo,
 			period: "November 2024 - December 2024",
 			description:
-				"Developed responsive web applications using React and Next.js. Collaborated with design teams for pixel-perfect UI implementations.",
+				"Design, develop, and maintain a website for Polimedia Public Relations Services using Laravel And TailwindCSS. Created database design using MySQL and PHPmyAdmin.",
 		},
 		{
 			title: "Front-End Web Developer (Magang Merdeka Batch 6)",
@@ -43,7 +43,7 @@ export default function ExperienceSection() {
 			companyLogo: pilihLogo,
 			period: "February 2024 - June 2024",
 			description:
-				"Built end-to-end web applications for various clients. Handled both frontend and backend development with modern technologies.",
+				"Pilih Jurusan is a career guidance consultation services consisting in workshops, psychological test, and coaching. In Pilih Jurusan i'm become a front-end web developer. and i handle a test for psychology test, and admin pages for the sidebar navigation. ",
 		},
 		{
 			title: "Full-Stack Web Developer (Studi Independen Batch 5)",
@@ -51,7 +51,7 @@ export default function ExperienceSection() {
 			companyLogo: gitsLogo,
 			period: "August 2023 - December 2023",
 			description:
-				"Built end-to-end web applications for various clients. Handled both frontend and backend development with modern technologies.",
+				"GITS.ID is your partner to achieve your business goals and improve your company productivity, powered by valuable Insights and Artificial Intelligence through IT solutions. I'm become a full stack web developer as a studi independen batch 5. I'm learning about laravel, and team contribution and in a last month it have a capstone project that's contains everything that has been learned.",
 		},
 		{
 			title: "Front-End Web Developer (Freelance)",
@@ -59,7 +59,7 @@ export default function ExperienceSection() {
 			companyLogo: polimediaLogo,
 			period: "June 2023 - August 2023",
 			description:
-				"Built end-to-end web applications for various clients. Handled both frontend and backend development with modern technologies.",
+				"I collaborate with my friend to build a website for my lecture, its called an Audiobook Polimedia. This website contain audiobook, book, and novel and for student final assignment publishing study program. This website give some experience to people who enjoy a read book.",
 		},
 		{
 			title: "Magang Sekolah",
@@ -67,7 +67,7 @@ export default function ExperienceSection() {
 			companyLogo: telkomLogo,
 			period: "January 2020 - March 2020",
 			description:
-				"Built end-to-end web applications for various clients. Handled both frontend and backend development with modern technologies.",
+				"I have experience in developing and implementing automated systems to streamline customer order tracking, significantly improving workflow efficiency. In addition to managing service orders and ensuring timely customer fulfillment, I also took the lead in building and maintaining a web-based attendance system. This platform successfully enhanced the process of tracking employee absences and improved reporting accuracy across the organization.",
 		},
 	];
 
