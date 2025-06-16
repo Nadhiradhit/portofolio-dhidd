@@ -4,7 +4,7 @@ import { ArrowBigDown } from "lucide-react";
 
 export default function AdditionalPanel({ additionalRef }) {
 	return (
-		<div className="panel w-screen h-full text-4xl font-content font-bold relative overflow-hidden">
+		<div className="panel w-screen h-full text-xl md:text-4xl font-content font-bold relative overflow-hidden">
 			<Noise
 				patternSize={250}
 				patternScaleX={1}
