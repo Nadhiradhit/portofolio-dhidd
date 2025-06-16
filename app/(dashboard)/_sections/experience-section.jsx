@@ -171,7 +171,7 @@ export default function ExperienceSection() {
 							ref={(el) => (cardsRef.current[index] = el)}
 							className="absolute inset-0 flex justify-center items-center opacity-0"
 							style={{ transform: "translateY(50px)" }}>
-							<div className="max-w-7xl w-full mx-auto px-4 md:px-0">
+							<div className="max-w-7xl w-full mx-auto px-4 lg:px-0">
 								<div className="block md:hidden border border-gray-200 rounded-2xl shadow-lg p-6 space-y-4 font-content relative overflow-hidden">
 									<Noise
 										patternSize={250}
