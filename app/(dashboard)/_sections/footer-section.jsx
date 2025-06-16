@@ -153,7 +153,11 @@ export default function FooterSection() {
 				<p
 					ref={subtitleRef}
 					className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
-					Tampaknya perjalanan dari web ini hanya sampai sini
+					it's donee ya guys ya, makasih kak udah liat website ku,{" "}
+					<span className="text-yellow-400 ">
+						{" "}
+						semoga aku diterima agar gsap motion ku makin mantap ❤️
+					</span>
 				</p>
 				<p
 					ref={subtitleRef}

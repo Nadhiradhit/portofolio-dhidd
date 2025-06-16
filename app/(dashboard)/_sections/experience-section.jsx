@@ -153,7 +153,7 @@ export default function ExperienceSection() {
 		<section>
 			<div className="h-60 md:h-96 flex justify-center items-center">
 				<h1
-					className="text-xl md:text-6xl font-body font-semibold text-center"
+					className="text-2xl lg:text-6xl font-body font-semibold text-center"
 					ref={titleRef}>
 					And then what's{" "}
 					<span className="bg-white text-gray-900 px-2 py-1 rounded-lg font-content">
