@@ -9,7 +9,6 @@ export default function AboutPanel({ aboutContentRef }) {
 	const floatingIconsRef = useRef([]);
 
 	useGSAP(() => {
-		// Initialize all icons
 		[...techIconsRef.current, ...floatingIconsRef.current].forEach((icon) => {
 			if (icon) {
 				gsap.set(icon, {
@@ -21,7 +20,6 @@ export default function AboutPanel({ aboutContentRef }) {
 		});
 
 		const startFloatingAnimation = () => {
-			// Animate background icons
 			techIconsRef.current.forEach((icon, index) => {
 				if (icon) {
 					gsap.to(icon, {
@@ -37,7 +35,6 @@ export default function AboutPanel({ aboutContentRef }) {
 				}
 			});
 
-			// Animate floating icons around text
 			floatingIconsRef.current.forEach((icon, index) => {
 				if (icon) {
 					gsap.to(icon, {

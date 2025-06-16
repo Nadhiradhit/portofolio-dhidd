@@ -2,7 +2,7 @@
 import { useState, useEffect, use } from "react";
 import PixelTrail from "@/components/event/pixel-train";
 import { MoveDown } from "lucide-react";
-import Image from "next/image";
+
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";

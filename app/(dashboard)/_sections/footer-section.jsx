@@ -147,17 +147,21 @@ export default function FooterSection() {
 				<h1
 					ref={titleRef}
 					className="text-6xl md:text-8xl font-bold text-white mb-6 font-content">
-					Thank You!
+					Thank <span className="text-yellow-400 font-body">You!</span>
 				</h1>
 
 				<p
 					ref={subtitleRef}
 					className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
-					Perjalanan ini telah berjalan dengan keren! Mari terhubung dan
-					berkolaborasi untuk menciptakan sesuatu yang luar biasa bersama.
+					Tampaknya perjalanan dari web ini hanya sampai sini
+				</p>
+				<p
+					ref={subtitleRef}
+					className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+					tapi kalo mau follow atau connect boleh kok kak 😊
 				</p>
 
-				<div ref={contactRef} className="mb-12">
+				{/* <div ref={contactRef} className="mb-12">
 					<h2 className="text-2xl font-semibold text-white mb-6">
 						Let's Connect
 					</h2>
@@ -173,7 +177,7 @@ export default function FooterSection() {
 							Find me on social media
 						</div>
 					</div>
-				</div>
+				</div> */}
 
 				<div
 					ref={socialRef}
